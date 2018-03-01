@@ -1,6 +1,7 @@
 <p id="notice"><%= notice %></p>
 
 <h1>People</h1>
+<hr />
 
 <table>
   <thead>
@@ -22,9 +23,9 @@
         <td><%= person.avatar %></td>
         <td><%= person.phone %></td>
         <td><%= person.email %></td>
-        <td><%= link_to 'Show', person %></td>
-        <td><%= link_to 'Edit', edit_person_path(person) %></td>
-        <td><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><button><%= link_to 'Show', person %></button></td>
+        <td><button><%= link_to 'Edit', edit_person_path(person) %></button></td>
+        <td><button><%= link_to 'Destroy', person, method: :delete, data: { confirm: 'Are you sure?' } %></button></td>
       </tr>
     <% end %>
   </tbody>
@@ -32,4 +33,4 @@
 
 <br>
 
-<%= link_to 'New Person', new_person_path %>
+<button><%= link_to 'New Person', new_person_path %> </button>
